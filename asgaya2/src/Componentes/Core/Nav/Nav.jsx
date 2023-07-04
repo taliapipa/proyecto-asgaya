@@ -24,7 +24,9 @@ const Nav = () => {
           <li>Quienes Somos</li>
           <li>FAQ</li>
           <li>Blog</li>
-          <li><img src={accountIcon} alt="account" /></li>
+          <Link to="/login">
+            <img src={accountIcon} alt="account" /> 
+          </Link>
           <li><img src={basketIcon} alt="basket" /></li>
           <Button text="Suscribirse" />
         </ul>

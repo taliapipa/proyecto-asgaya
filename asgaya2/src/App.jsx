@@ -3,10 +3,11 @@ import Nav from './Componentes/Core/Nav/Nav';
 import { Routes, Route } from "react-router-dom"
 import ProductDetail from './Componentes/Pages/ProductDetail';
 import ProductList from './Componentes/Pages/ProductList';
+import Account from './Componentes/Pages/Account';
 import "../src/Componentes/styles/App.css"
 import Button from './Componentes/Shared/Button/button';
 import hearticon from "./Assets/ic_round-favorite-bordericon.png"
-
+import Register from './Componentes/Pages/Register';
 
 export function App() {
 
@@ -49,6 +50,8 @@ export function App() {
         <Route path="/" element={<h1>HOME</h1>}/>
         <Route path="/list" element={<ProductList mapeoProducts={mapeoProducts}/>}/>
         <Route path="/detail/:id" element={<ProductDetail />}/>
+        <Route path="/login" element={<Account />}/>
+        <Route path="/register" element={<Register />}/>
         <Route
           path="*"
           element={
