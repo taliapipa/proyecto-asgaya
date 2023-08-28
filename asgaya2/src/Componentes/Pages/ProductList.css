@@ -3,7 +3,6 @@
     margin: 20px 0px 20px 0px;
 }
 
-
 .hearticon{
     width: 20px;
 }
@@ -19,8 +18,6 @@ ul {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items:flex-end ;
     margin: 10px;
     box-shadow: 0px 4px 4px 0px grey;
     width: 20%;
@@ -28,21 +25,36 @@ ul {
     color: black;
 }
 
+.img-product{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
 .product-name {
     font-family: "Display Fair";
     font-size: 16px;
+    padding-right: 20px;
+
 }
 
 .product-price{
     font-size: 12px;
-}
-.img-product{
-    width: 100%;
-    border-radius: 10px 10px 0px 0px;
+    padding-right: 20px;
 
 }
+
 
 .button-fav{
     align-items: center;
     justify-content: center;
-}
+    display: flex;
+    width: 100%;
+} 

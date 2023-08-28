@@ -6,7 +6,7 @@ const Register =()=>{
 
     return(
         <div className="registrate">
-        <h2>INICIA SESIÓN</h2>
+        <h2>REGÍSTRATE</h2>
         <form>
             <input type="text" id="nombre" name="nombre" placeholder="Nombre"/>
             <br />
