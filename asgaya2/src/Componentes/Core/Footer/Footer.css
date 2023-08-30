@@ -1,0 +1,56 @@
+footer{
+    background-color: #DEA67F;
+    display: flex;
+    flex-direction: column;
+    font-weight:lighter;
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+.enlaces{
+    margin-left: 00px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.bloque{
+    padding: 10px;
+    width: 25%;
+    font-size: 12px;
+}
+
+.logo{
+    width: 100%;
+    margin: 0;
+}
+.imgLogo{
+    width: 150px;
+    margin: 0;
+}
+
+.titulo{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.suscribe{
+    display: flex;
+    flex-direction: row;
+}
+.div-checkbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.checkbox{
+    width: 20px;
+    margin-right: 20px;
+    background-color: transparent;
+}
+.acepto{
+    font-size: 8px;
+    text-align: justify;
+}
