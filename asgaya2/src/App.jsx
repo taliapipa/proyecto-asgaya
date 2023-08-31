@@ -12,7 +12,7 @@ import userList from "../src/Componentes/data/users.json"
 import Profile from './Componentes/Pages/Profile';
 import AuthRoute from './Componentes/AuthRoute/AuthRoute';
 import Footer from './Componentes/Core/Footer/Footer';
-
+import Home from './Componentes/Pages/Home';
 export function App() {
 
   const [products, setProducts] = useState([]);
@@ -71,7 +71,7 @@ export function App() {
 
 
       <Routes>
-        <Route path="/" element={<h1>HOME</h1>}/>
+        <Route path="/" element={<Home/>}/>
         <Route path="/list" element={<ProductList mapeoProducts={mapeoProducts}/>}/>
         <Route path="/detail/:id" element={<ProductDetail />}/>
         <Route path="/login" element={<Account loginUser={loginUser} />}/>

@@ -25,7 +25,7 @@ const Footer = ()=> {
                 <div className='bloque newsletter'>
                     <p className='titulo'>Suscríbete a nuestra Newsletter!</p>
                     <form className='suscribe'>
-                        <input type="text" id="email" name="email" placeholder="Email"/>
+                        <input type="text" id="email" name="email" placeholder="Email" className='input-mail'/>
                         <Button text="Enviar" value="Enviar" type="submit"/>
                     </form>
                     <div className='div-checkbox'>

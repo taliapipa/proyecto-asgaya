@@ -39,6 +39,11 @@ footer{
     display: flex;
     flex-direction: row;
 }
+
+.input-mail{
+    border: none;
+}
+
 .div-checkbox{
     display: flex;
     flex-direction: row;
