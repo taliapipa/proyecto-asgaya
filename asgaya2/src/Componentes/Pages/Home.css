@@ -2,3 +2,32 @@
     width: 100%;
     margin: 20px 0px 20px 0px;
 }
+
+.ofrecemos{
+    flex-direction: row;
+    display: flex;
+}
+.vaca{
+    width: 33%;
+    background-color: #1E3629;
+    margin: 80px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.texto{
+    padding: 0 20px 0 20px;
+    position: relative;
+    top: -40px;
+}
+
+.vaca-circulo{
+    background-color: #1E3629;
+    position: relative;
+    top: -50px;
+    padding: 20px;
+    border-radius: 50%;
+}
