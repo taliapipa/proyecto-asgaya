@@ -80,8 +80,11 @@ const Home =()=>{
                         <p className='precio-sus'>10'99€</p>
                         <Button text='Añadir'/>
                     </li>
-
                 </ul>
+            </div>
+            <div className='banner-gallinas'>
+                <h2>¡También puedes apadrinar tu animal favorito!</h2>
+                <Button text='Más información'/>
             </div>
         </div>
     )
