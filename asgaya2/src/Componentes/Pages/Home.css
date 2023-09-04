@@ -120,3 +120,22 @@
     align-items: center;
     color: white;
 }
+.productos-unicos{
+    margin-top: 80px;
+}
+
+.productslist{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.productoslistado{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    margin-bottom: 40px;
+}
+

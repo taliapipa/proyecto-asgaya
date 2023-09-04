@@ -10,7 +10,9 @@ import Gallinasus from "../../Assets/gallinasus.png"
 import Ovejasus from "../../Assets/ovejasus.png"
 
 
-const Home =()=>{
+const Home =({mapeoProducts})=>{
+    const productsToShow = mapeoProducts && mapeoProducts.length >= 6 ? mapeoProducts.slice(0, 6) : [];
+
     return(
         <div className='home'>
             <img src={Banner} alt='Banner' className='banner'/>
@@ -85,6 +87,16 @@ const Home =()=>{
             <div className='banner-gallinas'>
                 <h2>¡También puedes apadrinar tu animal favorito!</h2>
                 <Button text='Más información'/>
+            </div>
+
+            <div className='productos-unicos'>
+                <h2>Productos únicos</h2>
+                <div className='productslist'>
+                    <div className='productoslistado'>
+                        <ul>{productsToShow}</ul>
+                    </div>
+                    <Button text='Ver todos los productos'/>
+                </div>
             </div>
         </div>
     )

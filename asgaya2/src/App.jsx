@@ -36,13 +36,11 @@ export function App() {
           <div className='description'>
             <p className='product-name'>{product.name}</p>
             <p className='product-price'>{product.price}</p>
-            <div className='button-fav'>     
+          </div>
+          <div className='button-fav'>     
               <Button text="Añadir"/>
               <img src={hearticon} alt='fav' className='hearticon'/>
             </div>
-          </div>
-
-
         </li>
       );
     });
@@ -71,7 +69,7 @@ export function App() {
 
 
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<Home mapeoProducts={mapeoProducts}/>}/>
         <Route path="/list" element={<ProductList mapeoProducts={mapeoProducts}/>}/>
         <Route path="/detail/:id" element={<ProductDetail />}/>
         <Route path="/login" element={<Account loginUser={loginUser} />}/>
