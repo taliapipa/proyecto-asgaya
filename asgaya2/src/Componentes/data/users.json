@@ -1,14 +1,7 @@
-[
+{
+    "users": [
     {
-        "email": "anacleta@upgrade.com",
-        "password": "123456",
-        "name": "Ana",
-        "role": "admin"
-    },
-    {
-        "email": "perensejo@upgrade.com",
-        "password": "987456",
-        "name": "Pablo",
-        "role": "client"
+        
     }
-]
+    ]
+}

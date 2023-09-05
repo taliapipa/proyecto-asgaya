@@ -8,6 +8,7 @@ import Huevos from "../../Assets/Frame 81huevos.png"
 import VacaSus from "../../Assets/vacasus.png"
 import Gallinasus from "../../Assets/gallinasus.png"
 import Ovejasus from "../../Assets/ovejasus.png"
+import { Link } from 'react-router-dom'
 
 
 const Home =({mapeoProducts})=>{
@@ -95,7 +96,7 @@ const Home =({mapeoProducts})=>{
                     <div className='productoslistado'>
                         <ul>{productsToShow}</ul>
                     </div>
-                    <Button text='Ver todos los productos'/>
+                    <Link to="/list"><Button text='Ver todos los productos'/></Link>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Nav from './Componentes/Core/Nav/Nav';
-import { Routes, Route, useNavigate } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import ProductDetail from './Componentes/Pages/ProductDetail';
 import ProductList from './Componentes/Pages/ProductList';
 import Account from './Componentes/Pages/Account';
@@ -8,11 +8,11 @@ import "../src/Componentes/styles/App.css"
 import Button from './Componentes/Shared/Button/button';
 import hearticon from "./Assets/ic_round-favorite-bordericon.png"
 import Register from './Componentes/Pages/Register';
-import userList from "../src/Componentes/data/users.json"
 import Profile from './Componentes/Pages/Profile';
 import AuthRoute from './Componentes/AuthRoute/AuthRoute';
 import Footer from './Componentes/Core/Footer/Footer';
 import Home from './Componentes/Pages/Home';
+
 export function App() {
 
   const [products, setProducts] = useState([]);
@@ -46,22 +46,6 @@ export function App() {
     });
   }
 
-  const [user, setUser] = useState(null);
-  const navigate = useNavigate();
-
-  const loginUser = (formData) => {
-    const findUser = userList.find(
-      (user) =>
-        user.email === formData.email && user.password === formData.password
-    );
-    if (findUser) {
-      setUser(findUser);
-      navigate('/');
-    } else {
-      setUser(false);
-    }
-  };
-
 
   return (
     <>
@@ -72,12 +56,12 @@ export function App() {
         <Route path="/" element={<Home mapeoProducts={mapeoProducts}/>}/>
         <Route path="/list" element={<ProductList mapeoProducts={mapeoProducts}/>}/>
         <Route path="/detail/:id" element={<ProductDetail />}/>
-        <Route path="/login" element={<Account loginUser={loginUser} />}/>
+        <Route path="/login" element={<Account  />}/>
         <Route path="/register" element={<Register />}/>
         <Route
           path="/profile"
           element={
-            <AuthRoute user={user} component={<Profile user={user} />} />
+            <AuthRoute  component={<Profile  />} />
           }
         />
         <Route

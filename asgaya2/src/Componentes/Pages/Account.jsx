@@ -1,37 +1,39 @@
 import Button from "../Shared/Button/button"
 import '../Pages/Account.css'
 import { Link } from 'react-router-dom';
-import { useState } from "react";
-
-const initial_state = {
-    email: "",
-    password: ""
-}
-
-const Account = ({loginUser}) => {
+import { useNavigate } from "react-router-dom";
+import { JwtContext } from "../../Context/jwtContext";
+import { useForm } from "react-hook-form";
+import {API} from "../../Services/api"
+import { useContext } from "react";
 
 
-    const [formData, setFormData] = useState(initial_state)
-
-
-    const handleInput = (ev) => {
-        const { name, value } = ev.target;
-        setFormData({ ...formData, [name]: value })
-    }
-
-    const handleClick = () => {
-        loginUser(formData)
-    }
+const Account = () => {
     
+const { setJwt } = useContext(JwtContext)
+
+const navigate = useNavigate()
+const { register, handleSubmit } = useForm();
+
+    const onSubmit = (formData) => {
+    API.post("login", formData).then((res)=>{
+    console.log(res.data);
+    localStorage.setItem("token", res.data.accessToken)
+    localStorage.setItem("user", res.data.user.email)
+    setJwt(res.data.accessToken)
+    navigate("/profile")
+    })
+    
+};
     return(
         <div className="inicio-sesion">
             <h2>INICIA SESIÓN</h2>
-            <form onSubmit={(ev)=>ev.preventDefault()}>
-                <input type="text" id="email" name="email" placeholder="Email" onInput={handleInput} value={formData.email}/>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <input type="text" id="email" name="email" placeholder="Email" {...register("email", { required: true })}/>
                 <br />
-                <input type="password" id="password" name="password" placeholder="Contraseña"  onInput={handleInput} value={formData.password} />
+                <input type="password" id="password" name="password" placeholder="Contraseña"  {...register("password", { required: true })} />
                 <br />
-                <Button text="Iniciar sesión" value="inicia sesion" type="submit" onClick={handleClick}/>
+                <Button text="Iniciar sesión" value="inicia sesion" type="submit"/>
                 <Link to="/register" className="register">O regístrate</Link>
             </form>
         </div>
