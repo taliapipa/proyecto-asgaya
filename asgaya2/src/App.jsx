@@ -12,6 +12,8 @@ import Profile from './Componentes/Pages/Profile';
 import RequireAuth from './Componentes/AuthRoute/AuthRoute';
 import Footer from './Componentes/Core/Footer/Footer';
 import Home from './Componentes/Pages/Home';
+import Apadrina from './Componentes/Pages/Apadrina';
+import Favoritos from './Componentes/Pages/Favoritos';
 
 export function App() {
 
@@ -66,6 +68,24 @@ export function App() {
               </RequireAuth>
             }
           />
+        <Route
+            path="/apadrina"
+            element={
+              <RequireAuth>
+                {' '}
+                <Apadrina />{' '}
+              </RequireAuth>
+            }
+        />
+        <Route
+            path="/favoritos"
+            element={
+              <RequireAuth>
+                {' '}
+                <Favoritos />{' '}
+              </RequireAuth>
+            }
+        />
         <Route
           path="*"
           element={
