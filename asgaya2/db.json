@@ -1,7 +1,44 @@
 {
   "users": [
     {
-      
+      "id": 1,
+      "name": "Nombre del usuario",
+      "email": "correo@example.com",
+      "password": "contraseña"
+    },
+    {
+      "id": 2,
+      "name": "Otro usuario",
+      "email": "otro@example.com",
+      "password": "otracontraseña"
+    },
+    {
+      "email": "taliaps97@gmail.com",
+      "password": "$2a$10$/bj0l5KSQq8JvnOuXI5HwOLyOfZedbM4BMTMTgu10Ylkb8YY5I0C6",
+      "name": "Talía",
+      "surname": "Pérez",
+      "id": 3
+    },
+    {
+      "email": "anacleta@upgrade.com",
+      "password": "$2a$10$c6JQLH/dSQ3ZMrHAodyC5.43d/JYeH36wJryqlXL3AQqKHu5hVf7y",
+      "name": "Ana",
+      "surname": "Cleta",
+      "id": 4
+    },
+    {
+      "email": "juanpicha@gmail.com",
+      "password": "$2a$10$T4VUJfW50ad6soLbfZgdF.dxEffapcwIJ2QOf/ZzWs0gahPVxpy2W",
+      "name": "Juan",
+      "surname": "Picha",
+      "id": 5
+    },
+    {
+      "email": "user@user.com",
+      "password": "$2a$10$ALzEWdqpEpP8NbSm7VafV.XJeZY2OY9hsSsBlko0ajN9ws4wkra7y",
+      "name": "Talía",
+      "surname": "cleta",
+      "id": 6
     }
   ]
 }
