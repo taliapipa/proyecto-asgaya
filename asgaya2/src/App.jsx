@@ -9,7 +9,7 @@ import Button from './Componentes/Shared/Button/button';
 import hearticon from "./Assets/ic_round-favorite-bordericon.png"
 import Register from './Componentes/Pages/Register';
 import Profile from './Componentes/Pages/Profile';
-import AuthRoute from './Componentes/AuthRoute/AuthRoute';
+import RequireAuth from './Componentes/AuthRoute/AuthRoute';
 import Footer from './Componentes/Core/Footer/Footer';
 import Home from './Componentes/Pages/Home';
 
@@ -51,7 +51,6 @@ export function App() {
     <>
       <Nav/>
 
-
       <Routes>
         <Route path="/" element={<Home mapeoProducts={mapeoProducts}/>}/>
         <Route path="/list" element={<ProductList mapeoProducts={mapeoProducts}/>}/>
@@ -59,11 +58,14 @@ export function App() {
         <Route path="/login" element={<Account  />}/>
         <Route path="/register" element={<Register />}/>
         <Route
-          path="/profile"
-          element={
-            <AuthRoute  component={<Profile  />} />
-          }
-        />
+            path="/profile"
+            element={
+              <RequireAuth>
+                {' '}
+                <Profile />{' '}
+              </RequireAuth>
+            }
+          />
         <Route
           path="*"
           element={
@@ -74,6 +76,7 @@ export function App() {
           }
         />
       </Routes>
+
 
       <Footer/>
     </>

@@ -1,3 +1,17 @@
-import { createContext } from "react";
+import { createContext, useState } from 'react';
 
-export const JwtContext = createContext()
+const defaultValue = {};
+
+const UserContext = createContext(defaultValue);
+
+const UserProvider = ({ children }) => {
+  const [user, setUser] = useState(localStorage.getItem('token') || null);
+
+  return (
+    <UserContext.Provider value={{ user, setUser }}>
+      {children}
+    </UserContext.Provider>
+  );
+};
+
+export { UserContext, UserProvider };

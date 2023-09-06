@@ -1,10 +1,11 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 
-
-function AuthRoute({ user, component }) {
-
-    if (user) return component;
-    if (!user) return <Navigate to="/login" />
-
+const RequireAuth = ({ children }) => {
+let location = useLocation();
+if (!localStorage.getItem("token")) {
+    return <Navigate to='/login' state={{ from: location }} replace />;
 }
-export default AuthRoute
+return children;
+};
+
+export default RequireAuth;
