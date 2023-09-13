@@ -15,3 +15,87 @@
     left: 90px;
     text-align: center;
 }
+
+.quienessomos-part{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.quienessomos-part-text{
+    width: 50%;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.quienessomos-part-text p{
+    width: 60%;
+}
+
+.gallinas-quienessomos{
+    width: 50%;
+    margin-left: 20px;
+
+}
+
+.gallinas-quienessomos img{
+    width: 40%;
+
+}
+
+.cerdos-quienessomos{
+    width: 50%;
+    margin-right: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+}
+
+.cerdos-quienessomos img{
+    width: 40%;
+
+}
+
+.mision-part{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.mision-part-text{
+    width: 50%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.mision-part-text p{
+    width: 60%;
+}
+
+.banner-blog{
+    font-family: 'Playfair Display';
+    background-color: #DAE0FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+.banner-blog h1{
+    width: 40%;
+    text-align: center;
+    margin-bottom: 20px;
+}
