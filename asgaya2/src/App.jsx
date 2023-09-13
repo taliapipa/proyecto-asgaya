@@ -14,7 +14,7 @@ import Footer from './Componentes/Core/Footer/Footer';
 import Home from './Componentes/Pages/Home';
 import Apadrina from './Componentes/Pages/Apadrina';
 import Favoritos from './Componentes/Pages/Favoritos';
-
+import About from './Componentes/Pages/About';
 export function App() {
 
   const [products, setProducts] = useState([]);
@@ -59,7 +59,8 @@ export function App() {
         <Route path="/detail/:id" element={<ProductDetail />}/>
         <Route path="/login" element={<Account  />}/>
         <Route path="/register" element={<Register />}/>
-        <Route
+        <Route path='/about' element={<About />}/>
+        <Route 
             path="/profile"
             element={
               <RequireAuth>
